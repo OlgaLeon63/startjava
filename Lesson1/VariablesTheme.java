@@ -1,69 +1,67 @@
 public class VariablesTheme {
 
     public static void main(String[] args) {
-
         System.out.println('\n' + "Задание 1. Вывод значений переменных на консоль \n");
-        byte operativeMemory = 8;
-        short windows = 10;
-        int hardDiskSize = 500_000;
-        long sborka = 19_045L;
-        float processorV = 3.50f;
+        byte ram = 8;
+        short windowsVer = 10;
+        int hddSize = 500_000;
+        long buildsOS = 19_045L;
+        float processorBaseClock = 3.50f;
         double displayRate = 60.000;
         char cores = '4';
         boolean diskDriveActive = true;
-        System.out.println(operativeMemory + " - оперативная память в Гб");
-        System.out.println(windows + " - версия системы windows");
-        System.out.println(hardDiskSize + " - размер жесткого диска в Гб");
-        System.out.println(sborka + " - сборка ОС");
-        System.out.println(processorV + " - базовая скорость процессора в Гц");
+        System.out.println(ram + " - оперативная память в Гб");
+        System.out.println(windowsVer + " - версия системы windows");
+        System.out.println(hddSize + " - размер жесткого диска в Гб");
+        System.out.println(buildsOS + " - сборка ОС");
+        System.out.println(processorBaseClock + " - базовая частота процессора в ГГц");
         System.out.println(displayRate + " - частота обновления в  Гц");
         System.out.println(cores + " - количество ядер");
-        if(diskDriveActive == true){
-            System.out.println("Дисковод отсутствует" + '\n');
+        if(diskDriveActive) {
+            System.out.println("Дисковод отсутствует \n");
         }
 
         System.out.println("Задание 2. Расчет стоимости товара со скидкой \n");
-        int pen = 100;
-        int book = 200;
+        int costPen = 100;
+        int costBook = 200;
+        int totalCost = costPen + costBook;
         float discount = 0.11f;
-        System.out.println("сумма скидки 11% - " + (pen + book) * discount + " руб");
-        System.out.println("общая стоимость товаров со скидкой 11% - " + (pen + book - (pen + 
-                book) * discount) + " руб \n");
+        System.out.println("сумма скидки 11% - " + (totalCost * discount) + " руб");
+        System.out.println("общая стоимость товаров со скидкой 11% - " + (totalCost - totalCost * 
+                discount) + " руб \n");
 
         System.out.println("Задание 3. Вывод слова JAVA \n");
-        char letterSmallA = 'a';
+        char smallA = 'a';
         char letterJ = 'J';
         char letterV = 'V';
-        char letterSmallV = 'v';
-        System.out.println("   " + letterJ + "    " + letterSmallA + "  " + letterSmallV + 
-                "     " + letterSmallV + "  " + letterSmallA + "   \n");
-        System.out.println("   " + letterJ + "   " + letterSmallA + " " + letterSmallA + "  " + 
-                letterSmallV + "   " + letterSmallV + "  " + letterSmallA + " " + letterSmallA + 
-                "  \n");
-        System.out.println(letterJ + "  " + letterJ + "  " + letterSmallA + letterSmallA + 
-                letterSmallA + letterSmallA + letterSmallA + "  " + letterV + " " + letterV + "  " 
-                + letterSmallA + letterSmallA + letterSmallA + letterSmallA + letterSmallA + 
-                " \n");
-        System.out.println(" " + letterJ + letterJ + "  " + letterSmallA + "     " + letterSmallA + 
-                "  " + letterV + "  " + letterSmallA + "     " + letterSmallA + '\n');
+        char smallV = 'v';
+        System.out.println("   " + letterJ + "    " + smallA + "  " + smallV + "     " + smallV + 
+                "  " + smallA);
+        System.out.println("   " + letterJ + "   " + smallA + " " + smallA + "  " + smallV + 
+                "   " + smallV + "  " + smallA + " " + smallA);
+        System.out.println(letterJ + "  " + letterJ + "  " + smallA + smallA + smallA + smallA + 
+                smallA + "  " + letterV + " " + letterV + "  " + smallA + smallA + smallA + 
+                smallA + smallA);
+        System.out.println(" " + letterJ + letterJ + "  " + smallA + "     " + smallA + "  " + 
+                letterV + "  " + smallA + "     " + smallA + " \n");
 
         System.out.println("Задание 4. Вывод min и max значений целых числовых типов  \n");
-        byte b = 127;
-        short s = 32_767;
-        int i = 2_147_483_647;
-        long l = 9_223_372_036_854_775_807L;
-        System.out.println("Переменная byte \n" + "первоначальное значение - " + b + '\n' + 
-                "значение после инкремента - " + b++ + '\n' + "значение после декремента - " + b-- 
-                + '\n');
-        System.out.println("Переменная short \n" + "первоначальное значение - " + s + '\n' + 
-                "значение после инкремента - " + s++ + '\n' + "значение после декремента - " + s-- 
-                + '\n');
-        System.out.println("Переменная int \n" + "первоначальное значение - " + i + '\n' + 
-                "значение после инкремента - " + i++ + '\n' + "значение после декремента - " + i-- 
-                + '\n');
-        System.out.println("Переменная long \n" + "первоначальное значение - " + l + '\n' + 
-                "значение после инкремента - " + l++ + '\n' + "значение после декремента - " + l-- 
-                + '\n');
+        byte maxByte = 127;
+        short maxShort = 32_767;
+        int maxInt = 2_147_483_647;
+        long maxLong = 9_223_372_036_854_775_807L;
+        System.out.println("Переменная byte \n" + "первоначальное значение - " + maxByte + '\n' + 
+                "значение после инкремента - " + ++maxByte + '\n' + "значение после декремента - " 
+                + --maxByte + '\n');
+        System.out.println("Переменная short \n" + "первоначальное значение - " + maxShort + '\n' + 
+                "значение после инкремента - " + ++maxShort + '\n' + "значение после декремента - "
+                 + --maxShort + '\n');
+        System.out.println("Переменная int \n" + "первоначальное значение - " + maxInt + '\n' + 
+                "значение после инкремента - " + ++maxInt + '\n' + "значение после декремента - "
+                 + --maxInt + '\n');
+        System.out.println("Переменная long \n" + "первоначальное значение - " + maxLong + '\n' + 
+                "значение после инкремента - " + ++maxLong + '\n' + "значение после декремента - " 
+                + --maxLong + '\n');
 
         System.out.println("Задание 5. Перестановка значений переменных \n");
         int per1 = 2;
@@ -72,21 +70,17 @@ public class VariablesTheme {
         System.out.println("Перестановка значений с помощью третьей переменной \n" + 
                 "исходные значения переменных - " + per1 + " и " + per2 + "\n" + 
                 "новые значения переменных - " + (per1 = per2) + " и " + (per2 = per3) + '\n');
-        per2 = per1;
-        per1 = per3;
         System.out.println("Перестановка значений с помощью арифметических операций \n" + 
                 "исходные значения переменных - " + per1 + " и " + per2);
-        per1 = per1 + per2;
+        per1 += per2;
         per2 = per1 - per2;
-        per1 = per1 - per2;
+        per1 -= per2;
         System.out.println("новые значения переменных - " + per1 + " и " + per2 + '\n');
-        per2 = per1;
-        per1 = per3;
         System.out.println("Перестановка значений с помощью побитовой операции \n" + 
                 "исходные значения переменных - " + per1 + " и " + per2);
-        per1 = per1 ^ per2;
-        per2 = per2 ^ per1;
-        per1 = per1 ^ per2;
+        per1 ^= per2;
+        per2 ^= per1;
+        per1 ^= per2;
         System.out.println("новые значения переменных - " + per1 + " и " + per2 + '\n');
 
         System.out.println("Задание 6. Вывод символов и их кодов \n");
