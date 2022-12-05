@@ -138,23 +138,26 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\nЗадание 9. Подсчет количества банкнот \n");
-        int sumUSD = 567;
+        int sumUsd = 567;
         int nom1 = 1, nom10 = 10, nom100 = 100;
-        int ones = sumUSD % 10;
-        int tens = sumUSD % 100 / 10;
-        int hundreds = sumUSD / 100;
-        if(hundreds < 10) {
-            hundreds = sumUSD / 100;
+        int ones = sumUsd % 10;
+        int tens = sumUsd % 100 / 10;
+        int hundreds = sumUsd / 100;
+        int numberNomUsd1 = 50;
+        int numberNomUsd10 = 5;
+        int numberNomUsd100 = 10;
+        if(hundreds < numberNomUsd100) {
+            hundreds = sumUsd / 100;
         } else {
-            hundreds = 10;
+            hundreds = numberNomUsd100;
         }
-        if((sumUSD - 100 * hundreds) /10 < 5) {
-            tens = (sumUSD - 100 * hundreds) / 10;
+        if((sumUsd - 100 * hundreds) /10 < numberNomUsd10) {
+            tens = (sumUsd - 100 * hundreds) / 10;
         } else {
-            tens = 5;
+            tens = numberNomUsd10;
         }
-        if((sumUSD - 100 * hundreds - 10 * tens) < 50) {
-            ones = (sumUSD - 100 * hundreds - 10 * tens);
+        if((sumUsd - 100 * hundreds - 10 * tens) < numberNomUsd1) {
+            ones = (sumUsd - 100 * hundreds - 10 * tens);
         } else {
             System.out.println("не хватает банкнот номиналом 1USD");
         }
