@@ -150,7 +150,7 @@ public class CyclesTheme {
         }
 
         System.out.println("\nЗадание 10.  Вывод таблицы умножения Пифагора \n");
-            for(row = 1; row <= 9; row++) {
+        for(row = 1; row <= 9; row++) {
             if(row == 1) {
                 System.out.printf("%3s |", "   ");
             } else {
