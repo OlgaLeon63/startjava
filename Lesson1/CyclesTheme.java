@@ -22,14 +22,14 @@ public class CyclesTheme {
         int num3 = -1;
         int min = num2;
         int max = num1;
-        if(num1 <= num2) {
+        if(num1 < num2) {
             max = num2;
             min = num1;
         } 
-        if(min >= num3) {
+        if(min > num3) {
             min = num3;
         }
-        if(max <= num3) {
+        if(max < num3) {
             max = num3;
         }
         for(int i = (max - 1); i > min; i--) {
