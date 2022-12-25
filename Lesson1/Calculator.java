@@ -5,26 +5,20 @@ public class Calculator {
         int a = 3;
         int b = 3;
         int result = 1;
-        char additionOp = '+';
-        char subtractionOp = '-';
-        char multiplicationOp = '*';
-        char divisionOp = '/';
-        char modulusOp = '%';
-        char powerOp = '^';
-        char sign = powerOp;
-        if(sign == additionOp) {
+        char sign = '^';
+        if(sign == '+') {
             result = a + b;
-        } else if(sign == subtractionOp) {
+        } else if(sign == '-') {
             result = a - b;
-        } else if(sign == multiplicationOp) {
+        } else if(sign == '*') {
             result = a * b;
-        } else if(sign == divisionOp) {
+        } else if(sign == '/') {
             result = a / b;
-        } else if(sign == modulusOp) {
+        } else if(sign == '%') {
             result = a % b;
-        } else if(sign == powerOp) {
-            for(int counter = 1; counter <= b; counter++) {
-                result = result * a;
+        } else if(sign == '^') {
+            for(int i = 1; i <= b; i++) {
+                result *= a;
             }
         }
         System.out.println(a + " " + sign + " " + b + " = " + result);
