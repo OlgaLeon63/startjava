@@ -33,7 +33,7 @@ public class Calculator {
         return result;
     }
 
-    public void calculationExpression() {
+    public void calculate() {
         result = 1;
         switch(sign) {
             case '+':

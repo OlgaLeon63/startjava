@@ -8,20 +8,20 @@ public class CalculatorTest {
         String choice;
 
         do {
-            Calculator calculatorOne = new Calculator();
+            Calculator calculator = new Calculator();
             System.out.println("Введите первое число:");
-            calculatorOne.setA(scanner.nextInt());
+            calculator.setA(scanner.nextInt());
             System.out.println("Введите знак математической операции (+, -, *, /, %, ^):");
-            calculatorOne.setSign(scanner.next().charAt(0));
+            calculator.setSign(scanner.next().charAt(0));
             System.out.println("Введите второе число:");
-            calculatorOne.setB(scanner.nextInt());
-            calculatorOne.calculationExpression();
-            System.out.println(calculatorOne.getA() + " " + calculatorOne.getSign() + " " + 
-                    calculatorOne.getB() + " = " + calculatorOne.getResult());
+            calculator.setB(scanner.nextInt());
+            calculator.calculate();
+            System.out.println(calculator.getA() + " " + calculator.getSign() + " " + 
+                    calculator.getB() + " = " + calculator.getResult());
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 choice = scanner.next();
-            } while(!(choice.equals("yes") || choice.equals("no")));
+            } while(!choice.equals("yes") && !choice.equals("no"));
         } while(choice.equals("yes"));
         scanner.close();
     }
