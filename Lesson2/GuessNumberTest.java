@@ -3,20 +3,19 @@ import java.util.Scanner;
 public class GuessNumberTest {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Игра Угадай число \n");
         System.out.println("Введите имя первого игрока:");
-        String nameOne = scanner.nextLine();
-        Player playerOne = new Player(nameOne);
+        String name = scanner.nextLine();
+        Player player1 = new Player(name);
         System.out.println("Введите имя второго игрока:");
-        String nameTwo = scanner.nextLine();
-        Player playerTwo = new Player(nameTwo);
+        name = scanner.nextLine();
+        Player player2 = new Player(name);
 
-        GuessNumber play = new GuessNumber(playerOne, playerTwo); 
+        GuessNumber game = new GuessNumber(player1, player2); 
         String choice = "yes";
         do {
-            play.guessNumber();
+            game.guessNumber();
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 choice = scanner.nextLine();
