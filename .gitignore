@@ -1,2 +1,6 @@
 # игнорировать все файлы в каталоге out/
 out/
+# игнорировать файл options
+src/com/startjava/lesson_2_3/calculator/options
+# игнорировать файл optionsj
+src/com/startjava/lesson_2_3/calculator/optionsj
